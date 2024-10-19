@@ -1,0 +1,9 @@
+/* /styles/globals.css */
+body, html {
+  font-family: 'Pirata One', cursive; /* Fonte com estilo pirata */
+  background-color: #e0c097; /* Cor que remete a pergaminho antigo */
+}
+
+h1, h2, h3, p, a {
+  color: #975c1c; /* Cor que remete a madeira escura */
+}
