@@ -1,0 +1,94 @@
+/* Seção de Notícias com Scrollbar Vertical */
+.newsSection {
+    background: url('../images/pachment-texture.jpg') no-repeat center;
+    background-size: cover;
+    padding: 20px;
+    border: 2px solid #3e2723;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    max-width: 1200px; /* Largura máxima ajustada */
+    margin: 0 auto;
+    height: 600px; /* Altura máxima ajustada para criar espaço para rolagem */
+    overflow-y: auto; /* Habilita apenas o scroll vertical */
+    overflow-x: hidden; /* Desabilita o scroll horizontal */
+    scrollbar-width: thin; /* Barra de rolagem mais fina no Firefox */
+    scrollbar-color: #d4af37 #ffdd00; /* Cores do scroll no Firefox */
+}
+
+/* Estilizando a barra de rolagem no Webkit (Chrome, Safari) */
+.newsSection::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+.newsSection::-webkit-scrollbar-track {
+    background: #ffdd00; /* Cor do fundo da barra de rolagem */
+}
+
+.newsSection::-webkit-scrollbar-thumb {
+    background-color: #d4af37; /* Cor do "polegar" que se move */
+    border-radius: 20px; /* Arredondando o polegar */
+    border: 2px solid #3e2723; /* Borda para destacar o polegar */
+}
+
+/* Título da Seção de Notícias */
+.newsSection h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #d4af37;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffdd00;
+    padding-bottom: 5px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Blocos de Notícias */
+.newsArticle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 239, 186, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    gap: 15px;
+    max-height: 200px; /* Altura máxima para cada bloco de notícia */
+}
+
+.imageWrapper {
+    flex: 1;
+    padding-right: 10px; /* Espaço entre imagem e conteúdo */
+}
+
+.contentWrapper {
+    flex: 2;
+    text-align: left;
+}
+
+.newsArticle h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.newsImage {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Layout em coluna para telas menores */
+@media (max-width: 768px) {
+    .newsArticle {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imageWrapper {
+        padding-right: 0;
+    }
+
+    .newsImage {
+        width: 100%;
+    }
+}

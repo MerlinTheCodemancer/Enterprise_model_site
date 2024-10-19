@@ -1,0 +1,53 @@
+/* /styles/Footer.module.css */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background: url('../images/sand-texture.jpg') no-repeat center;
+    background-size: cover;
+    padding: 20px;
+    border-top: 3px solid #3e2723; /* Madeira escura */
+}
+
+.footerColumn {
+    flex: 1;
+    padding: 10px;
+    color: #3e2723; /* Madeira escura */
+}
+
+.footerColumn h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f5bd04;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    text-align: left;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);/* Dourado */
+}
+
+.footerColumn ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerColumn ul li {
+    margin-bottom: 8px;
+    
+}
+
+.footerColumn ul li a {
+    text-decoration: none;
+    color: #833603; /* Dourado */
+    transition: color 0.3s;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7);
+}
+
+.footerColumn ul li a:hover {
+    color: #6f3e01; /* Laranja ao passar o mouse */
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7);
+}
+
+.footerColumn Image {
+    max-height: 100px;
+    max-width: 250px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5)); /* Sombra na logo */
+}

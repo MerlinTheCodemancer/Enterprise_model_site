@@ -1,0 +1,26 @@
+/* /styles/TextSlideSection.module.css */
+.textSlideSection {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background: url('../images/map-background.jpg') no-repeat center;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000; /* Sombra para contraste com a imagem de fundo */
+}
+
+.textContent {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente para melhor legibilidade */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.textContent h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #d4af37; /* Dourado */
+}
+
+.textContent p {
+    font-size: 1.2rem;
+}

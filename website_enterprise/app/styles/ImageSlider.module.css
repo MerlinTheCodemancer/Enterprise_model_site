@@ -1,0 +1,73 @@
+/* /styles/ImageSlider.module.css */
+.imageSlider {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Altura fixa para manter a proporção das imagens */
+    overflow: hidden;
+    margin: 20px 0;
+    border: 3px solid #ff8c00; /* Borda laranja que lembra madeira */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; /* Garante que ocupe a altura total do slider */
+}
+
+.slide {
+    min-width: 100%; /* Cada slide ocupa 100% da largura do contêiner */
+    height: 100%; /* Cada slide ocupa 100% da altura do contêiner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    object-fit: cover; /* Cobre a área disponível sem distorcer */
+    width: 100%;
+    height: 100%;
+}
+
+.prevButton, .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffdd00; /* Dourado */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.prevButton {
+    left: 10px;
+}
+
+.nextButton {
+    right: 10px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ffdd00; /* Dourado */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #d4af37; /* Dourado mais intenso */
+}
