@@ -1,8 +1,8 @@
-/* /styles/ImageSlider.module.css */
+/* ImageSlider.module.css */
 .imageSlider {
     position: relative;
     width: 100%;
-    height: 450px; /* Altura fixa para manter a proporção das imagens */
+    height: 450px; /* Altura fixa para telas maiores */
     overflow: hidden;
     margin: 20px 0;
     border: 3px solid #ff8c00; /* Borda laranja que lembra madeira */
@@ -12,12 +12,12 @@
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 100%; /* Garante que ocupe a altura total do slider */
+    height: 100%;
 }
 
 .slide {
-    min-width: 100%; /* Cada slide ocupa 100% da largura do contêiner */
-    height: 100%; /* Cada slide ocupa 100% da altura do contêiner */
+    min-width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,4 +70,11 @@
 
 .dot.active {
     background-color: #d4af37; /* Dourado mais intenso */
+}
+
+/* 📱 Responsividade para Mobile */
+@media (max-width: 768px) {
+    .imageSlider {
+        height: 250px; /* Reduz a altura em dispositivos móveis */
+    }
 }

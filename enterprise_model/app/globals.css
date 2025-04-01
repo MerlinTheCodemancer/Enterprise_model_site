@@ -7,3 +7,16 @@ body, html {
 h1, h2, h3, p, a {
   color: #975c1c; /* Cor que remete a madeira escura */
 }
+
+section{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+  }
+}

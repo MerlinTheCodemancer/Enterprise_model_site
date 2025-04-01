@@ -1,0 +1,110 @@
+/* /styles/Navbar.module.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url('../images/wood-texture.jpg'); /* Golden yellow */
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scrolled {
+    background-color: rgba(255, 215, 0, 0.98);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logoText {
+    font-family: 'One Piece', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: yellow; /* Brown color for pirate theme */
+}
+
+.navbarLinks {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbarLinks a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbarLinks a:hover {
+    color: #D2691E;
+}
+
+.navbarLinks a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #8B4513;
+    transition: width 0.3s;
+}
+
+.navbarLinks a:hover::after {
+    width: 100%;
+}
+
+.navbarToggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #8B4513;
+}
+
+@media (max-width: 768px) {
+    .navbarToggle {
+        display: block;
+    }
+
+    .navbarLinks {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(255, 215, 0, 0.98);
+        padding: 1rem;
+        gap: 1rem;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        opacity: 0;
+    }
+
+    .navbarLinks.open {
+        height: auto;
+        opacity: 1;
+        padding: 1rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbarLinks a {
+        padding: 0.5rem 0;
+    }
+}

@@ -1,0 +1,10 @@
+.missionSection {
+    padding: 5rem 1rem;
+    background-color: #8B4513; /* Brown background */
+    color: white;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity
+}

@@ -1,0 +1,139 @@
+.treasureSection {
+    padding: 5rem 1rem;
+    background-color: #FFF8DC; /* Light cream background */
+    position: relative;
+}
+
+.treasureSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/map_bg.png'); /* Add a subtle treasure map background */
+    background-size: cover;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.sectionHeader h2 {
+    font-family: 'One Piece', 'Arial', sans-serif;
+    font-size: 2.5rem;
+    color: #8B4513;
+    margin-bottom: 1rem;
+}
+
+.decorativeLine {
+    width: 100px;
+    height: 4px;
+    background-color: #FFD700; /* Gold */
+    margin: 0 auto;
+    position: relative;
+}
+
+.decorativeLine::before, .decorativeLine::after {
+    content: '☠️';
+    position: absolute;
+    top: -15px;
+    font-size: 1.5rem;
+}
+
+.decorativeLine::before {
+    left: -30px;
+}
+
+.decorativeLine::after {
+    right: -30px;
+}
+
+.treasureGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.treasureCard {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.treasureCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.imageWrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.treasureImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.treasureCard:hover .treasureImage {
+    transform: scale(1.05);
+}
+
+.contentWrapper {
+    padding: 1.5rem;
+}
+
+.contentWrapper h3 {
+    font-family: 'One Piece', 'Arial', sans-serif;
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.contentWrapper p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.readMoreBtn {
+    background-color: #FFD700;
+    color: #8B4513;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.readMoreBtn:hover {
+    background-color: #8B4513;
+    color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .treasureGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sectionHeader h2 {
+        font-size: 2rem;
+    }
+}
