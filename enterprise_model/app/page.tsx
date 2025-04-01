@@ -13,7 +13,7 @@ export default function Home() {
             <Navbar />
             <Hero />
             <ImageSlider />
-            <section id="content" style={{ display: 'flex', flexDirection: 'column', gap: '20px', padding: '20px' }}>
+            <section id="content" style={{ display: 'flex', flexDirection: 'column', gap: '5%', padding: '1%' }}>
                 <NewsSection />
                 <ProjectSlider />
             </section>

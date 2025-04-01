@@ -7,7 +7,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     max-width: 1200px;
     margin: 0 auto;
-    height: 600px; /* Altura definida para criar espaço para rolagem */
+    height: 30%; /* Altura definida para criar espaço para rolagem */
     overflow-y: auto; /* Rolagem vertical */
     overflow-x: hidden;
     scrollbar-width: thin;
@@ -47,7 +47,7 @@
     background-color: rgba(255, 239, 186, 0.8);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    gap: 15px;
+    gap: 10px;
     max-height: 200px;
 }
 
@@ -72,19 +72,30 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    max-height: 200px; /* Adjust the maximum height for images */
 }
 
 /* 📱 Responsividade para Mobile */
 @media (max-width: 768px) {
+   
+    
     .newsArticle {
         flex-direction: column;
         text-align: center;
+        max-height: 50%;
     }
     .imageWrapper {
         padding-right: 0;
     }
     .newsImage {
         width: 100%;
+        max-height: 150px; /* Increase the maximum height for mobile images */
+    }
+    .newsArticle h3 {
+        font-size: 1.8rem; /* Increase the font size for mobile */
+    }
+    .contentWrapper p {
+        font-size: 1.2rem; /* Adjust the font size for mobile */
     }
     /* 
       🔄 Reordenando seções:  

@@ -75,6 +75,12 @@
 /* 📱 Responsividade para Mobile */
 @media (max-width: 768px) {
     .imageSlider {
-        height: 250px; /* Reduz a altura em dispositivos móveis */
+        height: 250px;
+        width: 75%; /* Reduz a altura em dispositivos móveis */
+    }
+
+    .slide img {
+        object-fit: none; 
+        
     }
 }
